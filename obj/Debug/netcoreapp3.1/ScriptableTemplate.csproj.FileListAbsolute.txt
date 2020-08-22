@@ -1,0 +1,3 @@
+C:\code\ScriptableTemplate\obj\Debug\netcoreapp3.1\ScriptableTemplate.csprojAssemblyReference.cache
+C:\code\ScriptableTemplate\obj\Debug\netcoreapp3.1\ScriptableTemplate.AssemblyInfoInputs.cache
+C:\code\ScriptableTemplate\obj\Debug\netcoreapp3.1\ScriptableTemplate.AssemblyInfo.cs
