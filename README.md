@@ -37,7 +37,7 @@ namespace ConsoleApp2
 			var columnHeadings = new string[] { "String Column", "Int Column" };
 			variables.Add("Column",columnHeadings);
 			variables.Add("ColumnCount", columnHeadings.Length);
-			variables.Add("TableBorder", true);
+			variables.Add("TableBorder", true); // Toggle this on/off
 
 			var data = GetDynamicData();
 			variables.Add("Row", data);
