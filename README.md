@@ -59,3 +59,46 @@ namespace ConsoleApp2
 	}
 }
 ```
+
+### template.html
+
+```
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>{var:Title}</title>
+	<style>
+		{if:IsTrue(var:TableBorder)}
+		table, th, td {{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		{endIf}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				{for:i = 0 to func:subtract(var:ColumnCount,1)}
+					<th>{var:Column[var:i]}</th>
+				{endFor}
+			</tr>
+		</thead>
+
+		<tbody>
+			{for:iRow = 0 to func:subtract(var:RowCount,1)}
+				<tr>
+				{assign:iterRow = var:Row[var:iRow]}
+				{for:iColumn = 0 to func:subtract(var:ColumnCount,1)}
+					<td>{var:iterRow[var:iColumn]}</td>
+				{endFor}
+				</tr>
+			{endFor}
+		</tbody>
+	</table>
+</body>
+</html>
+```
+
