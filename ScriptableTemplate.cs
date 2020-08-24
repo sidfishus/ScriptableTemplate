@@ -1014,6 +1014,10 @@ namespace Sid.ScriptableTemplate
 					 name));
 				}
 			}
+			else if(arrayIndex.HasValue)
+			{
+				obj = ((object[])obj)[arrayIndex.Value];
+			}
 			return obj;
 		}
 
