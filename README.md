@@ -20,6 +20,7 @@ A simple example that can be used to create a HTML page based on a set of parame
 
 ```
 using System.Collections.Generic;
+using Sid.ScriptableTemplate;
 
 namespace ConsoleApp2
 {
