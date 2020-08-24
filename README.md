@@ -18,6 +18,7 @@ A simple example that can be used to create a HTML page based on a set of parame
 
 ### Main.cs
 
+```
 using System.Collections.Generic;
 
 namespace ConsoleApp2
@@ -56,3 +57,4 @@ namespace ConsoleApp2
 		}
 	}
 }
+```
