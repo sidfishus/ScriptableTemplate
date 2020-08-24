@@ -10,12 +10,14 @@ But the applications of this are only limited by your imagination!
 
 ## Notes
 
-I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing for a computer (to get it working faster) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it.
+I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated / similar code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing for a computer (to get it working faster) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it.
 
 ## Example
-A simple example that can be used to write a HTML page based on a dynamic set of data and parameters.
+
+A simple example that can be used to create a HTML page based on a set of parameters and a dynamic dataset. It consists of a HTML file which contains the static HTML template and the embedded script to output the dynamic parts, as well as a .cs file that uses the ScriptableTemplate engine to parameterise and use the template to generate the output file.
 
 ### Main.cs
+
 using System.Collections.Generic;
 
 namespace ConsoleApp2
