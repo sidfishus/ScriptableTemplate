@@ -11,3 +11,46 @@ But the applications of this are only limited by your imagination!
 ## Notes
 
 I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing for a computer (to get it working faster) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it.
+
+## Example
+A simple example that can be used to write a HTML page based on a dynamic set of data and parameters.
+
+### Main.cs
+using System.Collections.Generic;
+
+namespace ConsoleApp2
+{
+	class Program
+	{
+		static void Main(string[] args)
+		{
+			var templ = new Template();
+			templ.TemplateDirectory = "..\\..\\";
+
+			// Parameters
+			var variables = new System.Collections.Generic.Dictionary<string, object>();
+			variables.Add("Title","Example Web Page");
+			var columnHeadings = new string[] { "String Column", "Int Column" };
+			variables.Add("Column",columnHeadings);
+			variables.Add("ColumnCount", columnHeadings.Length);
+			variables.Add("TableBorder", true);
+
+			var data = GetDynamicData();
+			variables.Add("Row", data);
+			variables.Add("RowCount", data.Length);
+
+			System.IO.File.WriteAllText("..\\..\\output.html", templ.FormatTemplate("template.html", variables));
+		}
+
+		// Dynamic data e.g. via executing a SQL query
+		// To access column values from a row use array index notation
+		static object[] GetDynamicData()
+		{
+			var rv = new List<object[]>();
+			rv.Add(new object[] { "Test", 1111 });
+			rv.Add(new object[] { "Data", 23 });
+			rv.Add(new object[] { "More data", 999 });
+			return rv.ToArray();
+		}
+	}
+}
