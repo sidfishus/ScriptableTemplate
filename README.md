@@ -102,5 +102,7 @@ namespace ConsoleApp2
 }
 ```
 
-![foo](output_html.jpg "title")
+### Output File
+
+![Output](output_html.jpg "Output HTML")
 
