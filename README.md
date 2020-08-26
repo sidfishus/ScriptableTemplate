@@ -16,6 +16,48 @@ I created this on my lunch break at work because I could see it being a massive 
 
 A simple example that can be used to create a HTML page based on a set of parameters and a dynamic dataset. It consists of a HTML file which contains the static HTML template and the embedded script to output the dynamic parts, as well as a .cs file that uses the ScriptableTemplate engine to parameterise and use the template to generate the output file.
 
+### template.html
+
+```
+<!DOCTYPE html>
+
+<html>
+<head>
+	<title>{var:Title}</title>
+	<style>
+		{if:IsTrue(var:TableBorder)}
+		table, th, td {{
+			border: 1px solid black;
+			border-collapse: collapse;
+		}
+		{endIf}
+	</style>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				{for:i = 0 to func:subtract(var:ColumnCount,1)}
+					<th>{var:Column[var:i]}</th>
+				{endFor}
+			</tr>
+		</thead>
+
+		<tbody>
+			{for:iRow = 0 to func:subtract(var:RowCount,1)}
+				<tr>
+				{assign:iterRow = var:Row[var:iRow]}
+				{for:iColumn = 0 to func:subtract(var:ColumnCount,1)}
+					<td>{var:iterRow[var:iColumn]}</td>
+				{endFor}
+				</tr>
+			{endFor}
+		</tbody>
+	</table>
+</body>
+</html>
+```
+
 ### Main.cs
 
 ```
@@ -58,48 +100,6 @@ namespace ConsoleApp2
 		}
 	}
 }
-```
-
-### template.html
-
-```
-<!DOCTYPE html>
-
-<html>
-<head>
-	<title>{var:Title}</title>
-	<style>
-		{if:IsTrue(var:TableBorder)}
-		table, th, td {{
-			border: 1px solid black;
-			border-collapse: collapse;
-		}
-		{endIf}
-	</style>
-</head>
-<body>
-	<table>
-		<thead>
-			<tr>
-				{for:i = 0 to func:subtract(var:ColumnCount,1)}
-					<th>{var:Column[var:i]}</th>
-				{endFor}
-			</tr>
-		</thead>
-
-		<tbody>
-			{for:iRow = 0 to func:subtract(var:RowCount,1)}
-				<tr>
-				{assign:iterRow = var:Row[var:iRow]}
-				{for:iColumn = 0 to func:subtract(var:ColumnCount,1)}
-					<td>{var:iterRow[var:iColumn]}</td>
-				{endFor}
-				</tr>
-			{endFor}
-		</tbody>
-	</table>
-</body>
-</html>
 ```
 
 ![foo](output_html.jpg "title")
