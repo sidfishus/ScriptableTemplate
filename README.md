@@ -102,5 +102,5 @@ namespace ConsoleApp2
 </html>
 ```
 
-![foo](/output html.jpg "title")
+![foo](output_html.jpg "title")
 
