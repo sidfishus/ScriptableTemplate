@@ -112,5 +112,7 @@ namespace ConsoleApp2
 
 ### Output File
 
+This is the output file produced by the above application when viewed in a web browser.
+
 ![Output](output_html.jpg "Output HTML")
 
