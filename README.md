@@ -10,13 +10,17 @@ ScriptableTemplate will benefit any code/text that is repetitive, but the full a
 
 ## Notes
 
-I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated / similar code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing for a computer (to get it working faster) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it.
+I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated / similar code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing by a computer (to arrive at a working application quicker) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it. Features that are missing or that could be improved:
+- The ability to comment the script code does not exist.
+- Whitespace in between text and script in templates carries to the output file.
 
 ## Example
 
-A simple example that can be used to create a HTML page based on a set of parameters and a dynamic dataset. It consists of a HTML file which contains the static HTML template and the embedded script to output the dynamic parts, as well as a .cs file that uses the ScriptableTemplate engine to parameterise and use the template to generate the output file.
+This is a simple example that can be used to create a HTML page based on a set of parameters and a dynamic dataset to illustrate basic useage of ScriptableTemplate. It consists of a HTML file which contains the static HTML template and the embedded script to output the dynamic parts, as well as a .cs file that uses the ScriptableTemplate engine to parameterise and use the template to generate the output file.
 
 ### template.html
+
+Script is encapsulated in between {} blocks. To escape a '{', use '{{'. The full features and keywords that are available can be found by reading the ScriptableTemplate class code.
 
 ```
 <!DOCTYPE html>
@@ -59,6 +63,8 @@ A simple example that can be used to create a HTML page based on a set of parame
 ```
 
 ### Main.cs
+
+Includes a main entry point to generate the output file when the application is executed.
 
 ```
 using System.Collections.Generic;
