@@ -114,9 +114,9 @@ namespace ConsoleApp2
 
 This is the output file produced by the above application when viewed in a web browser.
 
-![Output](output_html_borders.jpg "Output HTML")
+![Output](output_html_borders_thin.jpg "Output HTML")
 
 This is the output file produced by the above application but with the 'TableBorder' variable specified as 'false' in Main.cs.
 
-![Output](output_html_noborders.jpg "Output HTML No Borders")
+![Output](output_html_noborders_thin.jpg "Output HTML No Borders")
 
