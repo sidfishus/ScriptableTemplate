@@ -6,7 +6,7 @@ ScriptableTemplate is a .NET Framework C# library I developed to remove code and
 
 I have used this for creating classic ASP web pages which follow the same general structure and contain a lot of repeated code by deriving from the 'Template' class and using templates for the web page and child controls. The resulting .asp files are produced according to a single C# class per output file which contains the page specific values and parameters. The benefits of this are the removal of repeated code (#1 rule of pragmatic programming...), an increase in productivity, as well as the ability to make wholesale changes to an entire application by changing the intermediary templates which the application is produced from.
 
-I have also used this for generating statically parameterisable SQL stored procedures and views which share the same concepts and repeated code but with the performance benefits of inline SQL as opposed to moving anything that is repeated in to sub SQL views and functions. Also, bug fixes to the shared code this can be deployed to all of the SQL functions and views which use it by a click of a button.  
+I have also used this for generating statically parameterisable SQL stored procedures and views which share the same concepts and repeated code but with the performance benefits of inline SQL as opposed to moving anything that is repeated in to sub SQL views and functions. Also, bug fixes to the shared code can be deployed to all of the SQL functions and views which use it by a click of a button.  
 
 ScriptableTemplate will benefit any code/text that is repetitive, but the full applications of it is only limited by your imagination!
 
