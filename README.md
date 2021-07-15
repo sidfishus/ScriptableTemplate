@@ -14,7 +14,7 @@ ScriptableTemplate will benefit any code/text that is repetitive, but the full a
 
 I created this on my lunch break at work because I could see it being a massive benefit to the productivity of my department at the time. Particularily on the 2 classic ASP applications we supported and developed due to the large swathes of repeated / similar code they both contained. Subsequently the syntax of the template script language this uses has been centered around the ease of parsing by a computer (to arrive at a working application quicker) as opposed to the ease of readability for a human. I would definitely consider improving the syntax in future versions if it was going to be used heavily and I had the resources to do it. Features that are missing or that could be improved:
 - The ability to comment the script code does not exist.
-- Whitespace in between text and script in templates carries to the output file.
+- Whitespace in between text and script in templates carries across to the output file.
 
 ## Example
 
